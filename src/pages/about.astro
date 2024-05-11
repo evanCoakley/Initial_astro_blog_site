@@ -1,7 +1,5 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About This Occurrence';
 const identity = {
@@ -56,9 +54,7 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
-    <Navigation />
-
-    <h1>{pageTitle}</h1>
+    <BaseLayout pageTitle={pageTitle}>
     <h2>...and why this site came to be!</h2>
     <p>
       My name is to be determined but I woke up in a hospital back in 1984 in
@@ -137,6 +133,6 @@ const textCase = "uppercase";
         <p>My goal is not 3 days.</p>
       )
     }
-    <Footer />
+    </BaseLayout>
   </body>
 </html>

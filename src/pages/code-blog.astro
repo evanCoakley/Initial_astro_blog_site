@@ -1,8 +1,6 @@
 ---
-
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Code Blog';
 ---
 
 <html lang="en">
@@ -15,9 +13,9 @@ import '../styles/global.css';
 	</head>
 	
 	<body>
-		<Navigation />
-
-		<h1>Blog</h1>
+		
+		<BaseLayout pageTitle={pageTitle}>
+		
 		<h2>Moments of Awe, Eons of Confusion</h2>
 
         <p>In the future, blog posts will posted here. The subject matter will involve code, projects I'm working on, problems I encounter and so forth. There will be another blog page for more personal posts, namely philosophical renderings that may be seen as brilliant, poorly thought out, or just downright insane, along with perhaps a few  odd stories from the road. It is after a crazy world out there, and I have seen some things. I have seen some things...
@@ -27,6 +25,7 @@ import '../styles/global.css';
 			<li><a href="/posts/post-2/">Post 2</a></li>
       		<li><a href="/posts/post-3/">Post 3</a></li>
 		  </ul>
-       <Footer />
+		</BaseLayout>
+	   
 	</body>
 </html>
