@@ -1,31 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = 'Code Blog';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	
-	<body>
-		
-		<BaseLayout pageTitle={pageTitle}>
-		
-		<h2>Moments of Awe, Eons of Confusion</h2>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
 
-        <p>In the future, blog posts will posted here. The subject matter will involve code, projects I'm working on, problems I encounter and so forth. There will be another blog page for more personal posts, namely philosophical renderings that may be seen as brilliant, poorly thought out, or just downright insane, along with perhaps a few  odd stories from the road. It is after a crazy world out there, and I have seen some things. I have seen some things...
-        </p>
-		<ul>
-			<li><a href="/posts/post-1/">Post 1</a></li>
-			<li><a href="/posts/post-2/">Post 2</a></li>
-      		<li><a href="/posts/post-3/">Post 3</a></li>
-		  </ul>
-		</BaseLayout>
-	   
-	</body>
+  <body>
+    <BaseLayout pageTitle={pageTitle}>
+      <h2>Moments of Awe, Eons of Confusion</h2>
+
+      <p>
+        In the future, blog posts will posted here. The subject matter will
+        involve code, projects I'm working on, problems I encounter and so
+        forth. There will be another blog page for more personal posts, namely
+        philosophical renderings that may be seen as brilliant, poorly thought
+        out, or just downright insane, along with perhaps a few odd stories from
+        the road. It is after a crazy world out there, and I have seen some
+        things. I have seen some things...
+      </p>
+      <ul>
+        {
+          allPosts.map((post) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} />
+          ))
+        }
+      </ul>
+    </BaseLayout>
+  </body>
 </html>
