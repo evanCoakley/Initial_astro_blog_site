@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = 'About This Occurrence';
+const pageTitle = 'About The Blog';
 const identity = {
   firstName: 'Evan',
   country: 'United States',
@@ -43,7 +43,7 @@ const textCase = "uppercase";
     <title>{pageTitle}</title>
     <style define:vars={{skillColor, fontWeight, textCase}}>
       h1 {
-        color: purple;
+        
         font-size: 4rem;
       }
       .skill {
@@ -51,58 +51,25 @@ const textCase = "uppercase";
         font-weight: var(--fontWeight);
         text-transform: var(--textCase);
       }
+      .dark .skill {
+        color: #928c8c;
+      }
     </style>
   </head>
   <body>
     <BaseLayout pageTitle={pageTitle}>
     <h2>...and why this site came to be!</h2>
     <p>
-      My name is to be determined but I woke up in a hospital back in 1984 in
-      the great and horrifying city of Chicago. My limbs seemed to grow quite a
-      bit over the next few years and I found myself and this absolutely
-      wonderful woman I was told to call my mother living in Richmond, Va.
-      during the early 90s. Eventually I moved to Michigan to live with my
-      father in 9th grade, fell back into Chicago for a year and then escaped to
-      California where mother had relocated to. And from California and the
-      legality of adulthood I couldn't sit still kept waking up hungover in
-      different cities across the country until finally I woke up clear headed
-      in Nashville, TN in my late twenties, having finally recovered from an
-      overpowering psychedelic experience in Austin TX that opened my eyes to
-      such incredible possibilities of harmony between humans that as I returned
-      to reality I slipped into a crippling depression due to the complete and
-      total lack of harmony I saw around me. But a few solid years in Nashville
-      seemed to the ole brain some good. I blinked one day and realized that
-      without even trying I had married the woman of my dreams, and after a few
-      years she screamed a lot one night and then handed me my first child.
-      Looking at the lad I realized that after years of jolly excursions into
-      the great beyond of purposelessness I finally had so much to stabilize
-      myself for and thus I began to pursue a career that didn't cause me to
-      emerge from sleep every morning soaked in a paralytic sludge of dread and
-      horror. I always figured I'd finally write a book about my reckless
-      travels and subsequently drop dead but no. It turns out I have this
-      enormous knack for problem solving and a deep love for code.
+      This Blog is a place for me to share my thoughts, experiences, deeply troubling insights and jaw-droppingly ecstatic moments all relating to Computer Science and software development. I've always been a bit of a scatterbrain, so I figured I'd put it to good use and share my thoughts with the world. I currently do a fair amount of independent work with Java and Spring, and have been begrudginly but effectively learning more and more about React. I'm currently learning Python, Django, and Flask on one end of my moods and things like Astro on the other end. Astro had a tutorial to build this initial blog so I went through it and enjoyed myself thoroughly. I'll be improving and adding to the site as time goes on, and the main blog posts will consist of that process and my thoughts, along with the utter flamboyant joys of hunting for a job in the tech industry, and whatever else I'm doing involving code. 
     </p>
     <p>
-      So here I am. A software engineer with a passion for web development. I've
-      been working in the industry for over 7 years and have experience with a
-      wide range of technologies, my absolute favorite for reasons unbeknownst
-      to me, being Java with Spring. I suppose I have a subconscious need for
-      the stability of Java after a life of utter jolly aimless chaos. I've
-      worked on everything from small personal projects to large enterprise
-      applications. I'm always looking for new and interesting projects to work
-      on, so if you have something you'd like to collaborate on, feel free to
-      reach out!
+      My name is Evan and I have been working in the tech industry for over three years but was laid off in 2023 from my position as a Software engineer. I've been working on my own projects and learning new technologies since then, as well as spending quite a bit of quality time with my kids. However I'm eager to work, and this blog will just be something else I can work on when the madness starts to seem in to my subconscious. I used to furiously write autobiographical fiction and poetry and drink heavily to keep the madness at bay. Now, I write code and learn new technologies, a field of study that will NEVER grow old or boring. Thus, the calm persists despite the gathering storm of the human subconcious. I'm excited to see where this blog goes, and I hope you are at least curious.
     </p>
     <p>
-      This here is just me tinkering with Astro, doing the tutorial and seeing
-      what I can do with it. I've been considering a blog for a while now so I
-      suppose we'll see where this leads... unless there is a tear in the
-      time-space continuum and I suddenly find myself dangling from an
-      abnormally high telephone pole in an alternate reality where no one
-      speaks... which is doubtful, but you never know.
+      If you are reading this. Thank you! I am slightly neurotic about wasting time so I do much appreciate you taking the time to check this out and hope you stay tuned for future posts. I'll always strive to avoid wasting anyones time with this blog. 
     </p>
 
-    <p>Here are a few, less scattered facts about me:</p>
+    <!-- <p>Here are a few, less scattered facts about me:</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
       <li>
@@ -116,7 +83,7 @@ const textCase = "uppercase";
           </li>
         )
       }
-    </ul>
+    </ul> -->
     <p>My skills are:</p>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
